@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.mycom.team.board.BoardVO;
+
 @Controller
 @RequestMapping(value = "/login")
 public class LoginController {
@@ -18,7 +20,6 @@ public class LoginController {
 		return "login";
 	}
 
-	
 	@RequestMapping(value = "/loginOk", method = RequestMethod.POST)
 	public String loginCheck(HttpSession session, UserVO vo) {
 		String returnURL = "";
@@ -36,7 +37,21 @@ public class LoginController {
 		}
 		return returnURL;
 	}
-
+	
+	@RequestMapping(value = "/adduser", method = RequestMethod.GET)
+	public String addMem() {
+		return "adduserform";
+	}
+	@RequestMapping(value = "/adduserok", method = RequestMethod.POST)
+	public String addMemOK(UserVO vo) {
+		int i = service.insertUser(vo);
+		if (i == 0) {
+			System.out.println("멤버 추가 실패");
+		} else {
+			System.out.println("멤버 추가 성공:D");
+		}
+		return "redirect:/login/login";
+	}
 	
 	// 로그아웃 하는 부분
 	@RequestMapping(value = "/logout")
