@@ -14,6 +14,7 @@ import com.mycom.team.board.BoardVO;
 public class LoginController {
 	@Autowired
 	UserServiceImpl service;
+//	UserService service;
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {

@@ -37,9 +37,9 @@ public class UserDAO {
 		return result;
 	}	
 	
-	public UserVO getUser(int seq) {
+	public UserVO getUser(int sid) {
 		System.out.println("===> JDBC로 getUser() 기능 처리");
-		UserVO one = sqlSession.selectOne("User.getUser", seq);
+		UserVO one = sqlSession.selectOne("User.getUser", sid);
 		return one;
 	}
 	

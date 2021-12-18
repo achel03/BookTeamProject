@@ -4,6 +4,7 @@ public class UserVO {
 	private String userid;
 	private String password;
 	private String username;
+	private int sid;
 
 	public String getUserid() {
 		return userid;
@@ -27,5 +28,13 @@ public class UserVO {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public int getSid() {
+		return sid;
+	}
+
+	public void setSid(int sid) {
+		this.sid = sid;
 	}
 }
