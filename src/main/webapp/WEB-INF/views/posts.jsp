@@ -72,6 +72,13 @@
       <a class="nav-item nav-link" href="#">Detail</a>
       <a class="nav-item nav-link" href="#">User</a>
     </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+	    	<button type="button" class="btn btn-secondary btn-sm" onclick="history.back()">SignOut</button>
+            </li>
+        </ul>
+    </div>
   </div>
 </nav>
 <div class="jumbotron jumbotron-fluid text-center">
