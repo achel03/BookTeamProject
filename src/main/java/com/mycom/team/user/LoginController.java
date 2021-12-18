@@ -39,11 +39,11 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/adduser", method = RequestMethod.GET)
-	public String addMem() {
+	public String addUser() {
 		return "adduserform";
 	}
 	@RequestMapping(value = "/adduserok", method = RequestMethod.POST)
-	public String addMemOK(UserVO vo) {
+	public String addUserOK(UserVO vo) {
 		int i = service.insertUser(vo);
 		if (i == 0) {
 			System.out.println("멤버 추가 실패");
