@@ -21,7 +21,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-	    	<button type="button" class="btn btn-secondary btn-sm" onclick="history.back()">Page 나가기</button>
+	    	<button type="button" class="btn btn-secondary btn-sm" onclick="history.back()">되돌리기</button>
             </li>
         </ul>
     </div>
